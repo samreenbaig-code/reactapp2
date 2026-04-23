@@ -11,35 +11,60 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-400">
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-400 px-6">
 
-      <form className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md" onSubmit={handleSubmit}>
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl grid md:grid-cols-2 overflow-hidden">
 
-        <h1 className="text-2xl font-bold mb-4 text-center">Contact Me</h1>
+        {/* LEFT SIDE - CONTACT INFO */}
+        <div className="p-8 bg-gray-900 text-white flex flex-col justify-center">
+          <h1 className="text-3xl font-bold mb-6">Contact</h1>
 
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="w-full border p-3 mb-4 rounded"
-          onChange={(e) => setName(e.target.value)}
-        />
+          <p className="mb-4">
+            📧 Email: samreenbaig007@gmail.com
+          </p>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full border p-3 mb-4 rounded"
-        />
+          <a href="https://github.com/samreenbaig-code" target="_blank" className="underline">
+  💻 GitHub: samreenbaig-code
+</a>
 
-        <textarea
-          placeholder="Message"
-          className="w-full border p-3 mb-4 rounded"
-        />
+          <p className="mb-4">
+            📍 Location: St. Catharines, ON, Canada
+          </p>
+        </div>
 
-        <button className="w-full bg-black text-white p-3 rounded hover:bg-gray-800 transition">
-          Send Message
-        </button>
+        {/* RIGHT SIDE - FORM */}
+        <form
+          onSubmit={handleSubmit}
+          className="p-8 flex flex-col justify-center"
+        >
+          <h1 className="text-2xl font-bold mb-4 text-center">
+            Send Message
+          </h1>
 
-      </form>
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full border p-3 mb-4 rounded"
+            onChange={(e) => setName(e.target.value)}
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            className="w-full border p-3 mb-4 rounded"
+          />
+
+          <textarea
+            placeholder="Message"
+            className="w-full border p-3 mb-4 rounded"
+          />
+
+          <button className="w-full bg-black text-white p-3 rounded hover:bg-gray-800 transition">
+            Send Message
+          </button>
+        </form>
+
+      </div>
 
     </main>
   );

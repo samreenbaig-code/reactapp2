@@ -10,9 +10,16 @@ export default function Projects() {
 
         {/* Project 1 */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-          <div className="h-48 bg-blue-300 flex items-center justify-center text-white text-xl">
-            Image Here
+          
+          {/* IMAGE */}
+          <div className="h-100 overflow-hidden">
+            <img
+              src="/project 3.png"
+              alt="Kids Learning App"
+              className="w-full h-full object-cover hover:scale-110 transition duration-500"
+            />
           </div>
+
           <div className="p-5">
             <h2 className="text-xl font-bold">Kids Learning App</h2>
             <p className="text-gray-600 mt-2">
@@ -23,9 +30,16 @@ export default function Projects() {
 
         {/* Project 2 */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition duration-300">
-          <div className="h-48 bg-pink-300 flex items-center justify-center text-white text-xl">
-            Image Here
+          
+          {/* IMAGE */}
+          <div className="h-100 overflow-hidden">
+            <img
+              src="/project2.png"
+              alt="E-commerce Website"
+              className="w-full h-full object-cover hover:scale-110 transition duration-500"
+            />
           </div>
+
           <div className="p-5">
             <h2 className="text-xl font-bold">E-commerce Website</h2>
             <p className="text-gray-600 mt-2">

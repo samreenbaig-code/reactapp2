@@ -1,23 +1,46 @@
 export default function Home() {
   return (
-    <main className="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <main className="relative h-screen w-full overflow-hidden">
 
-      <h1 className="text-5xl md:text-6xl font-extrabold">
-        Hi, I'm <span className="text-yellow-400">Samreen</span> 👋
-      </h1>
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="absolute inset-0 bg-cover bg-right"
+        style={{
+          backgroundImage: "url('/bg.png')", // 👉 your image in public folder
+        }}
+      ></div>
 
-      <p className="mt-6 text-lg text-gray-300 max-w-xl">
-        I design and build modern, responsive web applications using React & Next.js.
-      </p>
+      {/* DARK GRADIENT OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
 
-      <div className="mt-8 flex gap-4">
-        <a href="/projects" className="px-6 py-3 bg-yellow-400 text-black rounded-full font-semibold hover:scale-110 transition">
-          View Projects
-        </a>
+      {/* CONTENT */}
+      <div className="relative z-10 flex items-center h-full px-10 md:px-20">
+        
+        <div className="max-w-xl text-white">
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Hello, I'm Samreen 
+          </h1>
 
-        <a href="/contact" className="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">
-          Contact Me
-        </a>
+          <h2 className="text-xl md:text-2xl font-semibold mb-4">
+            Mobile Web Developer | AI Developer | UI Designer
+          </h2>
+
+          <p className="text-gray-300 mb-6 leading-7">
+            Mobile Web Developer using AI tools. I build responsive websites, 
+            mobile apps, and modern UI experiences.
+          </p>
+
+          <a
+  href="/cv/cv.pdf"
+  download
+  className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold transition shadow-lg inline-block"
+>
+  Download CV
+</a>
+
+        </div>
+
       </div>
 
     </main>
