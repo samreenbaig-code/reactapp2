@@ -1,18 +1,24 @@
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-[80vh] text-center bg-gradient-to-br from-blue-100 to-purple-200">
-      
-      <h1 className="text-5xl font-extrabold text-gray-800">
-        Hi, I'm Samreen 👋
+    <main className="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+      <h1 className="text-5xl md:text-6xl font-extrabold">
+        Hi, I'm <span className="text-yellow-400">Samreen</span> 👋
       </h1>
 
-      <p className="mt-4 text-lg text-gray-600 max-w-xl">
-        I build modern, responsive web applications using React and Next.js.
+      <p className="mt-6 text-lg text-gray-300 max-w-xl">
+        I design and build modern, responsive web applications using React & Next.js.
       </p>
 
-      <button className="mt-6 px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
-        View My Work
-      </button>
+      <div className="mt-8 flex gap-4">
+        <a href="/projects" className="px-6 py-3 bg-yellow-400 text-black rounded-full font-semibold hover:scale-110 transition">
+          View Projects
+        </a>
+
+        <a href="/contact" className="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-black transition">
+          Contact Me
+        </a>
+      </div>
 
     </main>
   );
